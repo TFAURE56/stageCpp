@@ -28,11 +28,11 @@ int main()
     cout << "\nMission creee :" << endl;
     cout << "Descriptif : " << mission.getDescriptifMission() << endl;
     cout << "Nombre de personnes : " << mission.getNbPersonne() << endl;
-    cout << "Nombre d'heures estimées : " << mission.getNbHeure() << endl;
+    cout << "Nombre d'heures estimees : " << mission.getNbHeure() << endl;
 
     // Exemple d'utilisation d'un setter pour modifier une information
     mission.setNbPersonne(mission.getNbPersonne() + 2);
-    cout << "Nombre de personnes mis à jour : " << mission.getNbPersonne() << endl;
+    cout << "Nombre de personnes mis a jour : " << mission.getNbPersonne() << endl;
 
 }
 
