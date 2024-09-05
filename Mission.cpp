@@ -1,6 +1,6 @@
 /*****************************************************************//**
- * \file   Entreprise.cpp
- * \brief  Definition de la classe Entreprise
+ * \file   Mission.cpp
+ * \brief  Definition de la classe Mission
  * 
  * \author Pierre
  * \version 0.1
@@ -9,7 +9,7 @@
  * Programme Cpp permettant de creer des objets pour décrire les stages
  *********************************************************************/
 
-#include "entreprise.h"
+#include "Mission.h"
 
 
 
@@ -22,23 +22,23 @@ using namespace std;
  * \li Ville = inconnu
  *  
  */
-Entreprise::Entreprise() {
+Mission::Mission() {
 
-	this->nomEntreprise = "Nom inconnu";
-	this->villeEntreprise = "Vannes";
+	this->nomMission = "Nom inconnu";
+	this->villeMission = "Vannes";
 
 }
 
 /**
  * \brief Constructeur avec parametres rentres en argument
  * 
- * \param nom nom de l'entreprise
- * \param ville ville de l'entreprise
+ * \param nom nom de l'Mission
+ * \param ville ville de l'Mission
  */
-Entreprise::Entreprise(std::string nom, std::string ville) {
-	this->nomEntreprise = nom;
+Mission::Mission(std::string nom, std::string ville) {
+	this->nomMission = nom;
 
-	this->villeEntreprise = ville;
+	this->villeMission = ville;
 }
 
 
@@ -46,77 +46,77 @@ Entreprise::Entreprise(std::string nom, std::string ville) {
  * \brief Destructeur
  * 
  */
-Entreprise::~Entreprise() {
+Mission::~Mission() {
 
-	cout << "Destrcution de l'entreprise " << this->nomEntreprise << " " << this->villeEntreprise << endl;
+	cout << "Destrcution de l'Mission " << this->nomMission << " " << this->villeMission << endl;
 
 }
 
 /**
  * \brief Constructeur de copie
  *  
- * \param entre Objet de type entreprise
+ * \param entre Objet de type Mission
  */
-Entreprise::Entreprise(const Entreprise& entre)
+Mission::Mission(const Mission& entre)
 {
     cout << "Copie de Capitaine" << endl;
-    this->nomEntreprise = entre.nomEntreprise;
-    this->villeEntreprise = entre.villeEntreprise;
+    this->nomMission = entre.nomMission;
+    this->villeMission = entre.villeMission;
 
 }
 
 /**
  * \brief Operateur d'affectation
  * 
- * \param entre Objet de type entreprise
- * \return Nouvelle objet de type entreprise
+ * \param entre Objet de type Mission
+ * \return Nouvelle objet de type Mission
  */
-Entreprise &Entreprise::operator = (const Entreprise& entre)
+Mission &Mission::operator = (const Mission& entre)
 { 
-    cout << "Affectation de l'entreprise" << std::endl;
+    cout << "Affectation de l'Mission" << std::endl;
     if (this != &entre)  // Pour éviter que l'on ne se recopie pas...
     {
-        this->nomEntreprise = entre.nomEntreprise;
-        this->villeEntreprise = entre.villeEntreprise;
+        this->nomMission = entre.nomMission;
+        this->villeMission = entre.villeMission;
     }
     return *this;
 }
 
 
 /**
- * \brief Accesseur de l'attribut nomEntreprise
+ * \brief Accesseur de l'attribut nomMission
  * 
- * \return Nom de l'entreprise
+ * \return Nom de l'Mission
  */
-std::string Entreprise::getNomEntreprise()
+std::string Mission::getNomMission()
 {
-    return this->nomEntreprise;
+    return this->nomMission;
 }
 
 /**
- * \brief Mutateur de l'attribut nomEntreprise
+ * \brief Mutateur de l'attribut nomMission
  *
- * \param nouveauNom nouveau nom de l'entreprise
+ * \param nouveauNom nouveau nom de l'Mission
  */
-void Entreprise::setEntreprise(std::string nouveauNom){
-    this->nomEntreprise = nouveauNom;
+void Mission::setMission(std::string nouveauNom){
+    this->nomMission = nouveauNom;
 }
 
 /**
- * \brief Accesseur de l'attribut villeEntreprise
+ * \brief Accesseur de l'attribut villeMission
  * 
- * \return Nom de l'entreprise
+ * \return Nom de l'Mission
  */
-std::string Entreprise::getVilleEntreprise() {
-    return this->villeEntreprise;
+std::string Mission::getVilleMission() {
+    return this->villeMission;
 }
 
 
 /**
- * \brief Mutateur de l'attribut villeEntreprise
+ * \brief Mutateur de l'attribut villeMission
  * 
- * \param nouvelleVille nouvelle ville de l'entreprise
+ * \param nouvelleVille nouvelle ville de l'Mission
  */
-void  Entreprise::setVilleEntreprise(std::string nouvelleVille) {
-    this->villeEntreprise = nouvelleVille;
+void  Mission::setVilleMission(std::string nouvelleVille) {
+    this->villeMission = nouvelleVille;
 }
