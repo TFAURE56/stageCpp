@@ -24,21 +24,23 @@ using namespace std;
  */
 Mission::Mission() {
 
-	this->nomMission = "Nom inconnu";
-	this->villeMission = "Vannes";
+	this->nbPersonne = 0;
+	this->descriptifMission = "Une description";
+    this->nbHeure = 0;
 
 }
 
 /**
  * \brief Constructeur avec parametres rentres en argument
  * 
- * \param nom nom de l'Mission
- * \param ville ville de l'Mission
+ * \param nbPersonne de la mission
+ * \param descriptifMission de la mission
+ * \param nbHeure de la mission
  */
-Mission::Mission(std::string nom, std::string ville) {
-	this->nomMission = nom;
-
-	this->villeMission = ville;
+Mission::Mission(int nbPersonne, std::string descriptifMission, int nbHeure) {
+	this->nbPersonne = nbPersonne;
+    this->descriptifMission = descriptifMission;
+	this->nbHeure = nbHeure;
 }
 
 
@@ -48,7 +50,7 @@ Mission::Mission(std::string nom, std::string ville) {
  */
 Mission::~Mission() {
 
-	cout << "Destrcution de l'Mission " << this->nomMission << " " << this->villeMission << endl;
+	cout << "Destrcution de la mission" << endl;
 
 }
 
@@ -59,9 +61,10 @@ Mission::~Mission() {
  */
 Mission::Mission(const Mission& entre)
 {
-    cout << "Copie de Capitaine" << endl;
-    this->nomMission = entre.nomMission;
-    this->villeMission = entre.villeMission;
+    cout << "Copie de Mission" << endl;
+    this->nbPersonne = entre.nbPersonne;
+    this->descriptifMission = entre.descriptifMission;
+    this->nbHeure = entre.nbHeure;
 
 }
 
@@ -73,11 +76,12 @@ Mission::Mission(const Mission& entre)
  */
 Mission &Mission::operator = (const Mission& entre)
 { 
-    cout << "Affectation de l'Mission" << std::endl;
+    cout << "Affectation de la mission" << std::endl;
     if (this != &entre)  // Pour éviter que l'on ne se recopie pas...
     {
-        this->nomMission = entre.nomMission;
-        this->villeMission = entre.villeMission;
+        this->nbPersonne = entre.nbPersonne;
+        this->descriptifMission = entre.descriptifMission;
+        this->nbHeure = entre.nbHeure;
     }
     return *this;
 }
@@ -88,9 +92,9 @@ Mission &Mission::operator = (const Mission& entre)
  * 
  * \return Nom de l'Mission
  */
-std::string Mission::getNomMission()
+int Mission::getNbPersonne()
 {
-    return this->nomMission;
+    return this->nbPersonne;
 }
 
 /**
@@ -98,8 +102,8 @@ std::string Mission::getNomMission()
  *
  * \param nouveauNom nouveau nom de l'Mission
  */
-void Mission::setMission(std::string nouveauNom){
-    this->nomMission = nouveauNom;
+void Mission::setNbPersonne(int nbPersonne){
+    this->nbPersonne = nbPersonne;
 }
 
 /**
@@ -107,8 +111,8 @@ void Mission::setMission(std::string nouveauNom){
  * 
  * \return Nom de l'Mission
  */
-std::string Mission::getVilleMission() {
-    return this->villeMission;
+std::string Mission::getDescriptifMission() {
+    return this->descriptifMission;
 }
 
 
@@ -117,6 +121,25 @@ std::string Mission::getVilleMission() {
  * 
  * \param nouvelleVille nouvelle ville de l'Mission
  */
-void  Mission::setVilleMission(std::string nouvelleVille) {
-    this->villeMission = nouvelleVille;
+void  Mission::setDescriptifMission(std::string newDescriptifMission) {
+    this->descriptifMission = newDescriptifMission;
+}
+
+/**
+ * \brief Accesseur de l'attribut nomMission
+ *
+ * \return Nom de l'Mission
+ */
+int Mission::getNbHeure()
+{
+    return this->nbHeure;
+}
+
+/**
+ * \brief Mutateur de l'attribut nomMission
+ *
+ * \param nouveauNom nouveau nom de l'Mission
+ */
+void Mission::setNbHeure(int nbHeure) {
+    this->nbHeure = nbHeure;
 }

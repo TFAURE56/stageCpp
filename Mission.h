@@ -1,6 +1,6 @@
 /*****************************************************************//**
- * \file   Entreprise.h
- * \brief  Declaration de la classe entreprise
+ * \file   Mission.h
+ * \brief  Declaration de la classe Mission
  *
  * \author Pierre
  * \date   June 2023
@@ -20,14 +20,14 @@
     * \li : commentaire avec Doxygen
     * \li : git, github
     */
-class Missions
+class Mission
 {
 
 private:
     /**
      * Membre prive nbPersonne : contient le nombre de personnes affecté a une mission
      */
-    std::string nbPersonne;
+    int nbPersonne;
     /**
      * Membre prive descriptifMission : contient la description d'une mission
      */
@@ -35,7 +35,7 @@ private:
     /**
      * Membre prive nbHeure : contient le nombre d'heure pour faire la mission
      */
-    std::string nbHeure;
+    int nbHeure;
 
 
 
@@ -47,14 +47,16 @@ public:
     /*Classe sous forme canonique*/
     Mission();
     ~Mission();
-    Entreprise(const Entreprise& entre);
-    Entreprise& operator = (const Entreprise& entre);
+    Mission(const Mission& entre);
+    Mission& operator = (const Mission& entre);
 
-    Entreprise(std::string nom, std::string ville);
-    std::string getNomEntreprise();
-    void setEntreprise(std::string nouveauNom);
-    std::string getVilleEntreprise();
-    void setVilleEntreprise(std::string nouvelleVille);
+    Mission(int nbPersonne, std::string descriptifMission, int nbHeure);
+    int getNbPersonne();
+    void setNbPersonne(int nbPersonne);
+    std::string getDescriptifMission();
+    void setDescriptifMission(std::string descriptifMission);
+    int getNbHeure();
+    void setNbHeure(int nbHeure);
 
 };
 
