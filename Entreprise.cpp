@@ -25,7 +25,7 @@ using namespace std;
 Entreprise::Entreprise() {
 
 	this->nomEntreprise = "Nom inconnu";
-	this->villeEntreprise = "inconnu";
+	this->villeEntreprise = "Vannes";
 
 }
 
