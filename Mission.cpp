@@ -50,7 +50,7 @@ Mission::Mission(int nbPersonne, std::string descriptifMission, int nbHeure) {
  */
 Mission::~Mission() {
 
-	cout << "Destrcution de la mission" << endl;
+	cout << "Destruction de la mission" << endl;
 
 }
 
