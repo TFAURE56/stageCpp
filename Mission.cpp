@@ -18,9 +18,9 @@ using namespace std;
 
 /**
  * \brief Constructeur par default 
- * \li Nom = anonyme
- * \li Ville = inconnu
- *  
+ * \li nbPersonne = 0
+ * \li descrptifMission = "Une description"
+ * \li nbHeure = 0
  */
 Mission::Mission() {
 
@@ -33,9 +33,9 @@ Mission::Mission() {
 /**
  * \brief Constructeur avec parametres rentres en argument
  * 
- * \param nbPersonne de la mission
+ * \param nbPersonne affectees a la mission
  * \param descriptifMission de la mission
- * \param nbHeure de la mission
+ * \param nbHeure estimer pour la mission
  */
 Mission::Mission(int nbPersonne, std::string descriptifMission, int nbHeure) {
 	this->nbPersonne = nbPersonne;
